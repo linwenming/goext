@@ -10,5 +10,7 @@ https://github.com/philippgille/gokv
 基于redis的生产者消费者队列
 https://github.com/robinjoseph08/redisqueue
 
+验证码：
+https://github.com/afocus/captcha
 
  */
