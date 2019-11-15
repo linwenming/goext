@@ -32,12 +32,20 @@ var (
 	//slog *logrus.Logger
 )
 
+func InitDefault(path string) {
+	output, err := NewWriter(path)
+	if err == nil {
+		logrus.SetOutput(output)
+	}
+	logrus.SetLevel(logrus.DebugLevel)
+}
+
 func InitLogger(path string) {
 	plog := logrus.New()
 	plog.Formatter = new(logrus.TextFormatter)
 	plog.Level = logrus.DebugLevel
 
-	output, err := New(path)
+	output, err := NewWriter(path)
 	if err == nil {
 		plog.SetOutput(output)
 	}

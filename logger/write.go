@@ -10,7 +10,7 @@ type LogWriter struct {
 	file *os.File
 }
 
-func New(logPath string) (*LogWriter, error) {
+func NewWriter(logPath string) (*LogWriter, error) {
 
 	dir :=  filepath.Dir(logPath)
 	if filex.Exists(dir) {
